@@ -4,12 +4,12 @@ import os
 import sys
 import pickle
 
-# class StreamData:
-# 	def __init__(self, source, dest, packet_no, data):
-# 		self.source = source
-# 		self.dest = dest
-# 		self.packet_no = packet_no
-# 		self.data = data
+class StreamData:
+	def __init__(self, source, dest, packet_no, data):
+		self.source = source
+		self.dest = dest
+		self.packet_no = packet_no
+		self.data = data
 
 def clientSend(fileName):
 	print("Client wants to send")

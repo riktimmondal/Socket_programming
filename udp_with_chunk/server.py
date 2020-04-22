@@ -4,12 +4,12 @@ import os
 import sys
 import pickle
 
-# class StreamData:
-# 	def __init__(self, source, dest, packet_no, data):
-# 		self.source = source
-# 		self.dest = dest
-# 		self.packet_no = packet_no
-# 		self.data = data
+class StreamData:
+	def __init__(self, source, dest, packet_no, data):
+		self.source = source
+		self.dest = dest
+		self.packet_no = packet_no
+		self.data = data
 
 
 def ServerList():
@@ -38,6 +38,7 @@ def ServerSend(fileName):
 	
 	#sending msg to client for validation
 	msg = "Server is alive and ready to send file"
+	datagram = StreamData()
 	serverSocket.sendto(msg.encode(), clientAddr)
 	
 	print("Msg send to client "+str(clientAddr))
